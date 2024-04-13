@@ -1,0 +1,5 @@
+/node_modules
+.env
+tct.txt
+
+public/javascripts/script.js

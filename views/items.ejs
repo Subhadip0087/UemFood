@@ -1,0 +1,31 @@
+<section class="hero py-16 mt-20" data-scroll>
+    <div class=" container mx-auto flex items-center justify-between px-20">
+      <div class="w-1/2 pl-5">
+        <h6 class="gcart text-lg text-white pb-10" data-scroll data-scroll-speed="2"><em>Are you Hungry ?</em></h6>
+        <h1 class=" gcart text-6xl text-white pb-20 font-bold" data-scroll data-scroll-speed="1.1">Don't Wait!</h1>
+        <button class="gcart px-8 py-4 rounded-full text-white font-bold mt-4 btn-primary" data-scroll >Order Now</button>
+        <button class="gcart px-10 py-5 ml-20 rounded-full text-white font-bold mt-4 bg-rose-600 cartbtn1" ><a href="/cart"  data-scroll>Go to cart</a></button>
+      </div>
+      <div class="w-1/2" data-scroll >
+            <img class="item-img rounded-full" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXIFMsJlbuAHxFFNiqx_FyoVHGV8CxrQRezA&usqp=CAU"  alt="img">
+      </div>
+    </div>
+  </section>
+
+<section class="menu container mx-auto px-20 py-8" data-scroll data-scroll-speed="0.5">
+ <div>
+  <h1 class="text-white font-bold border-y-2 inline-block text-4xl mb-20">All Items</h1>
+ </div>
+ <div class="grid grid-cols-4 mb-8 gap-20">
+  <% menus.forEach(function(menu){ %>
+  <div class="flex flex-col border-solid rounded-3xl pt-8 border-2 border-lime-600 items-center justify-center my-5">
+    <img src="<%= menu.image %>" class="rounded-full food-img" alt="">
+    <h1 class="text-2xl py-8 text-white "><%= menu.name %></h1>
+    <div class="flex items-center font-bold text-2xl mb-8 text-white w-11/12 justify-around">
+      <p>₹<%= menu.price %></p>
+      <button data-menu="<%= JSON.stringify(menu) %>" class="add-cart text-lg font-bold  rounded-3xl py-2 px-6 rounded-full">+ Add</button>
+    </div>
+   </div>
+   <% }) %>
+ </div>
+</section>
